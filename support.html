@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — BioPulse</title>
+  <style>
+    :root {
+      --bg: #0A0A0C; --card: #161618; --border: #2A2A2C;
+      --text: #FFFFFF; --text-sec: #8E8E93; --text-ter: #48484A;
+      --sleep: #A78BFA; --insights: #00D4FF; --exercise: #9FE850;
+      --journal: #FFB347; --move: #FF4559;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+      line-height: 1.7; -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 32px; border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 17px; font-weight: 700; color: var(--text); text-decoration: none;
+    }
+    .logo-dot {
+      width: 26px; height: 26px; border-radius: 7px;
+      background: linear-gradient(135deg, var(--sleep), var(--insights));
+      display: flex; align-items: center; justify-content: center; font-size: 13px;
+    }
+    .nav-back { color: var(--text-sec); text-decoration: none; font-size: 14px; }
+    .nav-back:hover { color: var(--text); }
+    .hero {
+      text-align: center; padding: 80px 24px 60px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-icon { font-size: 48px; margin-bottom: 20px; }
+    h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 800; letter-spacing: -1px; margin-bottom: 12px; }
+    .hero-sub { font-size: 17px; color: var(--text-sec); max-width: 480px; margin: 0 auto 32px; }
+    .btn-primary {
+      display: inline-block; background: var(--sleep); color: #000;
+      font-size: 15px; font-weight: 700; padding: 14px 28px; border-radius: 14px;
+      text-decoration: none; transition: opacity 0.2s;
+    }
+    .btn-primary:hover { opacity: 0.9; }
+    .content { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+    h2 { font-size: 22px; font-weight: 800; margin-bottom: 24px; }
+    .faq-list { margin-bottom: 60px; }
+    details {
+      border: 1px solid var(--border); border-radius: 14px;
+      margin-bottom: 10px; overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    details:hover { border-color: var(--text-ter); }
+    details[open] { border-color: var(--sleep); }
+    summary {
+      padding: 18px 20px; font-size: 15px; font-weight: 600;
+      cursor: pointer; list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+'; color: var(--text-sec);
+      font-size: 20px; font-weight: 400;
+      transition: transform 0.2s;
+    }
+    details[open] summary::after { transform: rotate(45deg); }
+    .faq-answer {
+      padding: 0 20px 18px;
+      font-size: 14px; color: var(--text-sec); line-height: 1.7;
+    }
+    .faq-answer a { color: var(--sleep); }
+    .contact-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 20px; padding: 32px;
+      text-align: center; margin-bottom: 48px;
+    }
+    .contact-icon { font-size: 36px; margin-bottom: 16px; }
+    .contact-title { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .contact-sub { font-size: 14px; color: var(--text-sec); margin-bottom: 20px; }
+    .contact-email {
+      display: inline-block; background: rgba(167,139,250,0.1);
+      border: 1px solid rgba(167,139,250,0.25);
+      color: var(--sleep); font-size: 14px; font-weight: 600;
+      padding: 10px 20px; border-radius: 10px; text-decoration: none;
+    }
+    .beta-card {
+      background: linear-gradient(135deg, rgba(167,139,250,0.08), rgba(0,212,255,0.04));
+      border: 1px solid rgba(167,139,250,0.2);
+      border-radius: 20px; padding: 32px; margin-bottom: 48px;
+    }
+    .beta-title { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .beta-sub { font-size: 14px; color: var(--text-sec); margin-bottom: 16px; }
+    .beta-badge {
+      display: inline-block; background: var(--sleep); color: #000;
+      font-size: 11px; font-weight: 800; padding: 4px 12px; border-radius: 20px;
+    }
+    footer {
+      text-align: center; padding: 32px 24px; border-top: 1px solid var(--border);
+      font-size: 13px; color: var(--text-ter);
+    }
+    footer a { color: var(--text-sec); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><div class="logo-dot">💙</div>BioPulse</a>
+  <a href="/" class="nav-back">← Zurück</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-icon">💬</div>
+  <h1>Support</h1>
+  <p class="hero-sub">Fragen zur App? Wir helfen dir gerne weiter. Antwortzeit: innerhalb von 48 Stunden.</p>
+  <a href="mailto:biopulsehealthappsupport@gmail.com" class="btn-primary">✉️ E-Mail schreiben</a>
+</div>
+
+<div class="content">
+
+  <div class="beta-card">
+    <div class="beta-title">🚀 BioPulse ist in der Beta</div>
+    <div class="beta-sub">Die App befindet sich aktuell in der Beta-Phase. Bugs und unvollständige Features sind normal — dein Feedback hilft uns direkt beim Verbessern. Schreib uns einfach.</div>
+    <span class="beta-badge">Beta v1.0</span>
+  </div>
+
+  <h2>Häufige Fragen</h2>
+
+  <div class="faq-list">
+
+    <details>
+      <summary>Warum sehe ich keine Gesundheitsdaten in der App?</summary>
+      <div class="faq-answer">
+        BioPulse braucht Zugriff auf Apple Health. Öffne die iOS-Einstellungen → Datenschutz &amp; Sicherheit → Gesundheit → BioPulse und aktiviere alle Kategorien. Alternativ: Einstellungen in BioPulse → HealthKit Berechtigungen → direkt zu den System-Einstellungen.
+      </div>
+    </details>
+
+    <details>
+      <summary>Wo werden meine Daten gespeichert?</summary>
+      <div class="faq-answer">
+        Ausschließlich auf deinem Gerät oder in deiner persönlichen iCloud — je nach deiner Wahl beim Login. BioPulse hat keinen eigenen Server und keinen Zugriff auf deine Daten. Mehr dazu in unserer <a href="/privacy.html">Datenschutzerklärung</a>.
+      </div>
+    </details>
+
+    <details>
+      <summary>Brauche ich eine Apple Watch?</summary>
+      <div class="faq-answer">
+        Nein, BioPulse funktioniert auch ohne Apple Watch — dann mit den Daten die dein iPhone erfasst (Schritte, Aktivität etc.). Mit Apple Watch sind deutlich mehr Daten verfügbar: Schlaf, HRV, Herzfrequenz, Körpertemperatur und mehr.
+      </div>
+    </details>
+
+    <details>
+      <summary>Was kostet BioPulse?</summary>
+      <div class="faq-answer">
+        Die Grundfunktionen sind kostenlos. Es gibt ein optionales Pro-Abo für erweiterte Features. Preise werden vor dem offiziellen Launch bekanntgegeben. Während der Beta ist alles kostenlos verfügbar.
+      </div>
+    </details>
+
+    <details>
+      <summary>Wie kann ich einen Bug melden?</summary>
+      <div class="faq-answer">
+        Schreib uns eine E-Mail an <a href="mailto:biopulsehealthappsupport@gmail.com">biopulsehealthappsupport@gmail.com</a> mit einer kurzen Beschreibung was passiert ist. Screenshots helfen enorm. Wir melden uns innerhalb von 48 Stunden.
+      </div>
+    </details>
+
+    <details>
+      <summary>Wie kann ich alle meine Daten löschen?</summary>
+      <div class="faq-answer">
+        In BioPulse: Einstellungen → Daten löschen → Bestätigen. Das entfernt alle lokal gespeicherten Daten (Journal, Profil, Gym-Einträge). HealthKit-Daten werden nicht gelöscht — die verwaltest du direkt in der Apple Health App.
+      </div>
+    </details>
+
+    <details>
+      <summary>Unterstützt BioPulse iOS 27?</summary>
+      <div class="faq-answer">
+        Ja. BioPulse wurde für iOS 26 entwickelt und ist vollständig kompatibel mit iOS 27. Auf iOS 27 Geräten profitierst du von verbesserten Schlaf-Tracking-Daten und neuen HealthKit-Features.
+      </div>
+    </details>
+
+    <details>
+      <summary>Wie bekomme ich Zugang zur Beta?</summary>
+      <div class="faq-answer">
+        Schreib uns eine E-Mail an <a href="mailto:biopulsehealthappsupport@gmail.com">biopulsehealthappsupport@gmail.com</a> mit dem Betreff "Beta-Zugang". Wir schicken dir einen TestFlight-Link.
+      </div>
+    </details>
+
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-icon">📮</div>
+    <div class="contact-title">Noch Fragen?</div>
+    <div class="contact-sub">Wir antworten innerhalb von 48 Stunden · DE &amp; EN</div>
+    <a href="mailto:biopulsehealthappsupport@gmail.com" class="contact-email">
+      biopulsehealthappsupport@gmail.com
+    </a>
+  </div>
+
+  <div id="terms" style="padding-top: 20px;">
+    <h2>Nutzungsbedingungen</h2>
+
+    <p style="color: var(--text-sec); font-size: 15px; margin-bottom: 20px;">Stand: Juni 2026</p>
+
+    <p><strong>1. Anbieter</strong><br>
+    Steven Daul, Auf dem Klint 2, 29227 Celle (Kleingewerbe, nicht im Handelsregister eingetragen)</p>
+
+    <p><strong>2. Leistungsbeschreibung</strong><br>
+    BioPulse ist eine iOS-App zur persönlichen Gesundheits- und Fitnessübersicht.</p>
+
+    <p><strong>3. Kein Medizinprodukt</strong><br>
+    BioPulse ist kein Medizinprodukt (MDR 2017/745) und ersetzt keine ärztliche Beratung oder Diagnose. Alle Daten dienen ausschließlich der persönlichen Information. Bei gesundheitlichen Beschwerden wende dich an einen Arzt.</p>
+
+    <p><strong>4. Mindestalter</strong><br>
+    Die Nutzung ist ab 16 Jahren gestattet.</p>
+
+    <p><strong>5. Nutzungsrechte</strong><br>
+    Du erhältst ein nicht-exklusives, nicht-übertragbares Recht zur privaten Nutzung der App.</p>
+
+    <p><strong>6. Haftung</strong><br>
+    Für die Richtigkeit der aus HealthKit bezogenen Daten übernehmen wir keine Haftung. Die Daten werden von Apple und dem jeweiligen Gerät erfasst.</p>
+
+    <p><strong>7. Anwendbares Recht</strong><br>
+    Es gilt deutsches Recht. Gerichtsstand: Celle, Deutschland.</p>
+
+    <p><strong>8. Terms of Service (EN)</strong><br>
+    BioPulse is not a medical device and does not replace medical advice. Minimum age: 16. German law applies. For questions: <a href="mailto:biopulsehealthappsupport@gmail.com">biopulsehealthappsupport@gmail.com</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <a href="/">BioPulse</a> ·
+  <a href="/privacy.html">Datenschutz</a> ·
+  <a href="/privacy.html#impressum">Impressum</a> ·
+  © 2026 Steven Daul
+</footer>
+
+</body>
+</html>

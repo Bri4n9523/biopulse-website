@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutz &amp; Impressum — BioPulse</title>
+  <style>
+    :root {
+      --bg: #0A0A0C; --card: #161618; --border: #2A2A2C;
+      --text: #FFFFFF; --text-sec: #8E8E93; --text-ter: #48484A;
+      --sleep: #A78BFA; --insights: #00D4FF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+      line-height: 1.7; -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 32px; border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 17px; font-weight: 700; color: var(--text); text-decoration: none;
+    }
+    .logo-dot {
+      width: 26px; height: 26px; border-radius: 7px;
+      background: linear-gradient(135deg, var(--sleep), var(--insights));
+      display: flex; align-items: center; justify-content: center; font-size: 13px;
+    }
+    .nav-back { color: var(--text-sec); text-decoration: none; font-size: 14px; }
+    .nav-back:hover { color: var(--text); }
+    .lang-toggle {
+      display: flex; justify-content: center; gap: 8px; padding: 32px 24px 0;
+    }
+    .lang-btn {
+      padding: 7px 20px; border-radius: 10px; border: 1px solid var(--border);
+      background: transparent; color: var(--text-sec);
+      font-size: 13px; font-weight: 600; cursor: pointer;
+      font-family: inherit; transition: all 0.2s;
+    }
+    .lang-btn.active { background: var(--sleep); color: #000; border-color: var(--sleep); }
+    .content { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+    h1 { font-size: 32px; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
+    .meta { font-size: 13px; color: var(--text-ter); margin-bottom: 48px; }
+    h2 { font-size: 18px; font-weight: 700; margin: 40px 0 12px; color: var(--sleep); }
+    h3 { font-size: 15px; font-weight: 600; margin: 24px 0 8px; }
+    p { font-size: 15px; color: var(--text-sec); margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 15px; color: var(--text-sec); margin-bottom: 6px; }
+    a { color: var(--sleep); }
+    .highlight {
+      background: rgba(167,139,250,0.08); border: 1px solid rgba(167,139,250,0.2);
+      border-left: 3px solid var(--sleep); border-radius: 12px; padding: 16px 20px; margin: 16px 0;
+    }
+    .highlight p { color: var(--text); margin: 0; font-size: 14px; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 60px 0; }
+    footer {
+      text-align: center; padding: 32px 24px; border-top: 1px solid var(--border);
+      font-size: 13px; color: var(--text-ter);
+    }
+    footer a { color: var(--text-sec); text-decoration: none; }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo"><div class="logo-dot">💙</div>BioPulse</a>
+  <a href="/" class="nav-back">← Zurück</a>
+</nav>
+<div class="lang-toggle">
+  <button class="lang-btn active" onclick="setLang('de')">Deutsch</button>
+  <button class="lang-btn" onclick="setLang('en')">English</button>
+</div>
+
+<!-- DEUTSCH -->
+<div class="content" id="de">
+  <h1>Datenschutzerklärung</h1>
+  <p class="meta">Stand: Juni 2026 · BioPulse Beta v1.0</p>
+  <div class="highlight"><p>🔐 Kurzversion: BioPulse speichert keine deiner Daten auf eigenen Servern. Alles bleibt auf deinem Gerät oder in deiner persönlichen iCloud. Wir haben keinen Zugriff.</p></div>
+  <h2>1. Verantwortlicher</h2>
+  <p>Steven Daul<br>Auf dem Klint 2, 29227 Celle, Deutschland<br>E-Mail: <a href="mailto:biopulsehealthappsupport@gmail.com">biopulsehealthappsupport@gmail.com</a></p>
+  <h2>2. Grundsatz: Keine eigenen Server</h2>
+  <p>BioPulse betreibt keine eigenen Server und keine eigenen Datenbanken. Alle personenbezogenen Daten verbleiben ausschließlich lokal auf deinem iPhone oder in deiner persönlichen iCloud. Wir haben keinen Zugriff auf deine Daten.</p>
+  <h2>3. Welche Daten verarbeitet werden</h2>
+  <h3>3.1 Gesundheitsdaten (Art. 9 DSGVO)</h3>
+  <p>Mit deiner ausdrücklichen Einwilligung greift BioPulse auf Gesundheitsdaten in Apple HealthKit zu:</p>
+  <ul>
+    <li>Herzfrequenz, HRV, Ruhepuls</li>
+    <li>Schlafdaten (Dauer, Phasen, Atemstörungen)</li>
+    <li>Aktivitätsdaten (Schritte, Kalorien, Aktivitätsringe)</li>
+    <li>Körperdaten (Gewicht, Größe, BMI, Körperfett)</li>
+    <li>Blutsauerstoff (SpO₂), Atemfrequenz, Körpertemperatur</li>
+    <li>VO₂max, Trainingsdaten</li>
+  </ul>
+  <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO i.V.m. Art. 9 Abs. 2 lit. a DSGVO. Du kannst die Einwilligung jederzeit in iOS-Einstellungen → Gesundheit → Datenzugriff widerrufen.</p>
+  <h3>3.2 Manuell eingegebene Daten</h3>
+  <p>Stimmung, Tagebucheinträge, Wasseraufnahme, Gewichtseinträge — ausschließlich lokal gespeichert.</p>
+  <h3>3.3 Profildaten</h3>
+  <p>Name, Geburtsdatum, Körpergröße, Gewichtsziel, Fitnessziele — nur lokal gespeichert.</p>
+  <h2>4. Datenspeicherung</h2>
+  <h3>Option A — Nur lokal</h3>
+  <p>Alle Daten auf deinem iPhone in der verschlüsselten App-Datenbank. Kein Netzwerkzugriff.</p>
+  <h3>Option B — iCloud (mit Sign in with Apple)</h3>
+  <p>Synchronisation über Apple CloudKit. Daten sind Ende-zu-Ende verschlüsselt. Apple Inc. fungiert als Auftragsverarbeiter gemäß Art. 28 DSGVO. <a href="https://www.apple.com/de/privacy/" target="_blank">Apple Datenschutzerklärung</a></p>
+  <h2>5. Keine Weitergabe an Dritte</h2>
+  <p>Keine Datenweitergabe. Keine Werbung. Kein Data-Mining.</p>
+  <h2>6. Kein Tracking</h2>
+  <p>Die Beta-Version enthält kein Analyse-Framework und kein Tracking.</p>
+  <h2>7. Deine Rechte (Art. 15–21 DSGVO)</h2>
+  <p>Auskunft, Berichtigung, Löschung (Einstellungen → Daten löschen), Einschränkung, Datenübertragbarkeit, Widerspruch.<br>Kontakt: <a href="mailto:biopulsehealthappsupport@gmail.com">biopulsehealthappsupport@gmail.com</a></p>
+  <h2>8. Beschwerderecht</h2>
+  <p>Landesbeauftragte für den Datenschutz Niedersachsen<br>Prinzenstraße 5, 30159 Hannover · <a href="https://www.lfd.niedersachsen.de" target="_blank">lfd.niedersachsen.de</a></p>
+  <h2>9. Mindestalter</h2>
+  <p>BioPulse richtet sich an Personen ab 16 Jahren (Art. 8 DSGVO).</p>
+  <h2>10. Änderungen</h2>
+  <p>Wesentliche Änderungen werden in der App angekündigt. Aktuelle Version: <a href="https://biopulse-health.de/privacy">biopulse-health.de/privacy</a></p>
+
+  <hr class="divider" id="impressum">
+
+  <h1>Impressum</h1>
+  <p class="meta">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</p>
+  <h2>Anbieter</h2>
+  <p>Steven Daul<br>Auf dem Klint 2<br>29227 Celle<br>Deutschland<br>E-Mail: <a href="mailto:biopulsehealthappsupport@gmail.com">biopulsehealthappsupport@gmail.com</a></p>
+  <h2>Rechtliche Hinweise</h2>
+  <p>Kleingewerbetreibender — nicht im Handelsregister eingetragen.<br>Keine Umsatzsteuer-Identifikationsnummer (Kleinunternehmerregelung gemäß § 19 UStG).</p>
+  <h2>Inhaltlich verantwortlich</h2>
+  <p>Steven Daul (Anschrift wie oben) gemäß § 18 Abs. 2 MStV</p>
+  <h2>Streitschlichtung</h2>
+  <p>OS-Plattform: <a href="https://ec.europa.eu/consumers/odr" target="_blank">ec.europa.eu/consumers/odr</a><br>Wir nehmen nicht an Streitbeilegungsverfahren vor Verbraucherschlichtungsstellen teil.</p>
+  <h2>Medizinischer Hinweis</h2>
+  <div class="highlight"><p>⚕️ BioPulse ist kein Medizinprodukt (MDR 2017/745) und ersetzt keine ärztliche Beratung, Diagnose oder Behandlung. Alle Gesundheitsdaten dienen ausschließlich der persönlichen Information. Bei gesundheitlichen Beschwerden wende dich an einen Arzt.</p></div>
+</div>
+
+<!-- ENGLISH -->
+<div class="content" id="en" style="display:none;">
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: June 2026 · BioPulse Beta v1.0</p>
+  <div class="highlight"><p>🔐 Short version: BioPulse does not store your data on its own servers. Everything stays on your device or in your personal iCloud. We have no access.</p></div>
+  <h2>1. Controller</h2>
+  <p>Steven Daul<br>Auf dem Klint 2, 29227 Celle, Germany<br>Email: <a href="mailto:biopulsehealthappsupport@gmail.com">biopulsehealthappsupport@gmail.com</a></p>
+  <h2>2. Core principle: No own servers</h2>
+  <p>BioPulse operates no servers or databases of its own. All personal data remains on your iPhone or in your personal iCloud. We have no access to your data.</p>
+  <h2>3. What data is processed</h2>
+  <h3>3.1 Health data (Art. 9 GDPR)</h3>
+  <p>With your explicit consent, BioPulse accesses Apple HealthKit data including heart rate, HRV, sleep, activity, body measurements, SpO₂, respiratory rate, body temperature, VO₂max, and workout data.</p>
+  <p><strong>Legal basis:</strong> Art. 6(1)(a) and Art. 9(2)(a) GDPR. Withdraw consent in iOS Settings → Health → Data Access.</p>
+  <h3>3.2 Manually entered data</h3>
+  <p>Mood, diary entries, water intake, weight — stored locally only.</p>
+  <h2>4. Data storage</h2>
+  <p><strong>Local:</strong> Encrypted on-device database, no network access.<br><strong>iCloud (optional):</strong> Apple CloudKit, end-to-end encrypted. Apple Inc. acts as data processor. <a href="https://www.apple.com/privacy/" target="_blank">Apple Privacy Policy</a></p>
+  <h2>5. No third-party sharing</h2>
+  <p>No data sharing. No advertising. No data mining.</p>
+  <h2>6. No tracking</h2>
+  <p>The beta contains no analytics framework and no tracking.</p>
+  <h2>7. Your rights (Art. 15–21 GDPR)</h2>
+  <p>Access, rectification, erasure (Settings → Delete Data), restriction, portability, objection.<br>Contact: <a href="mailto:biopulsehealthappsupport@gmail.com">biopulsehealthappsupport@gmail.com</a></p>
+  <h2>8. Right to complain</h2>
+  <p>Supervisory authority for Lower Saxony, Germany: Die Landesbeauftragte für den Datenschutz Niedersachsen, Prinzenstraße 5, 30159 Hanover.</p>
+  <h2>9. Age requirement</h2>
+  <p>BioPulse is for users aged 16+ (Art. 8 GDPR).</p>
+  <hr class="divider">
+  <h1>Legal Notice</h1>
+  <p class="meta">Pursuant to § 5 DDG (German Digital Services Act)</p>
+  <h2>Provider</h2>
+  <p>Steven Daul<br>Auf dem Klint 2, 29227 Celle, Germany<br>Email: <a href="mailto:biopulsehealthappsupport@gmail.com">biopulsehealthappsupport@gmail.com</a></p>
+  <p>Sole trader — not registered in the commercial register. No VAT ID (§ 19 UStG small business).</p>
+  <h2>Medical Disclaimer</h2>
+  <div class="highlight"><p>⚕️ BioPulse is not a medical device (MDR 2017/745) and does not replace medical advice, diagnosis, or treatment. All health data is for personal information only. Consult a doctor for health concerns.</p></div>
+</div>
+
+<footer>
+  <a href="/">BioPulse</a> · <a href="/support.html">Support</a> · © 2026 Steven Daul
+</footer>
+<script>
+  function setLang(lang) {
+    document.getElementById('de').style.display = lang === 'de' ? 'block' : 'none';
+    document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active',
+        (lang === 'de' && btn.textContent === 'Deutsch') ||
+        (lang === 'en' && btn.textContent === 'English'));
+    });
+  }
+</script>
+</body>
+</html>
