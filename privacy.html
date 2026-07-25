@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Datenschutz &amp; Impressum — BioPulse</title>
+  <title>Datenschutz, Nutzungsbedingungen &amp; Impressum · BioPulse</title>
   <style>
     :root {
       --bg: #0A0A0C; --card: #161618; --border: #2A2A2C;
@@ -76,39 +76,60 @@
 <!-- DEUTSCH -->
 <div class="content" id="de">
   <h1>Datenschutzerklärung</h1>
-  <p class="meta">Stand: Juni 2026 · BioPulse Beta v1.0</p>
+  <p class="meta">Stand: Juli 2026</p>
   <div class="highlight"><p>🔐 Kurzversion: BioPulse speichert keine deiner Daten auf eigenen Servern. Alles bleibt auf deinem Gerät oder in deiner persönlichen iCloud. Wir haben keinen Zugriff.</p></div>
   <h2>1. Verantwortlicher</h2>
   <p>Steven Daul<br>Auf dem Klint 2, 29227 Celle, Deutschland<br>E-Mail: <a href="mailto:biopulsehealthappsupport@gmail.com">biopulsehealthappsupport@gmail.com</a></p>
   <h2>2. Grundsatz: Keine eigenen Server</h2>
-  <p>BioPulse betreibt keine eigenen Server und keine eigenen Datenbanken. Alle personenbezogenen Daten verbleiben ausschließlich lokal auf deinem iPhone oder in deiner persönlichen iCloud. Wir haben keinen Zugriff auf deine Daten.</p>
+  <p>BioPulse betreibt keine eigenen Server und keine eigenen Datenbanken. Es gibt bei uns kein Nutzerkonto und keine Stelle, an der wir deine Daten einsehen könnten. Alle personenbezogenen Daten verbleiben ausschließlich lokal auf deinem iPhone oder in deiner persönlichen iCloud.</p>
+  <p>Ganz ohne Internet kommt die App an drei Stellen nicht aus: der iCloud-Sync, wenn du ihn einschaltest (Abschnitt 4), die Wetteranzeige (Abschnitt 3.4) und die Lebensmittelsuche in BioFood (Abschnitt 3.6). Was dabei jeweils übertragen wird, steht in diesen Abschnitten. Deine Gesundheitsdaten sind bei Wetter und Lebensmittelsuche nicht beteiligt.</p>
   <h2>3. Welche Daten verarbeitet werden</h2>
   <h3>3.1 Gesundheitsdaten (Art. 9 DSGVO)</h3>
-  <p>Mit deiner ausdrücklichen Einwilligung greift BioPulse auf Gesundheitsdaten in Apple HealthKit zu:</p>
+  <p>Mit deiner ausdrücklichen Einwilligung liest BioPulse Gesundheitsdaten aus Apple HealthKit:</p>
   <ul>
-    <li>Herzfrequenz, HRV, Ruhepuls</li>
+    <li>Herzfrequenz, HRV, Ruhepuls, Blutdruck</li>
     <li>Schlafdaten (Dauer, Phasen, Atemstörungen)</li>
     <li>Aktivitätsdaten (Schritte, Kalorien, Aktivitätsringe)</li>
     <li>Körperdaten (Gewicht, Größe, BMI, Körperfett)</li>
     <li>Blutsauerstoff (SpO₂), Atemfrequenz, Körpertemperatur</li>
-    <li>VO₂max, Trainingsdaten</li>
+    <li>VO₂max, Trainingsdaten (auf Wunsch mit GPS-Route)</li>
+    <li>Blutzucker (auch Werte, die ein Sensor oder eine andere App in Apple Health eingetragen hat)</li>
+    <li>Geburtsdatum</li>
   </ul>
-  <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO i.V.m. Art. 9 Abs. 2 lit. a DSGVO. Du kannst die Einwilligung jederzeit in iOS-Einstellungen → Gesundheit → Datenzugriff widerrufen.</p>
+  <p>Gibst du im optionalen <strong>Gesundheitsprofil</strong> Erkrankungen oder Gesundheitszustände an (z. B. Diabetes), sind auch diese Angaben besonders schutzwürdig. Sie sind freiwillig, standardmäßig ausgeschaltet, dienen nur dem Dokumentieren und Aufbereiten für den Arzt (keine Bewertung, keine Diagnose) und lassen sich jederzeit ändern oder löschen. Erfasst wird nur eine grobe Angabe, die du aus einer Liste wählst, keine Diagnosecodes und kein Krankheitsstadium.</p>
+  <p>Im Gesundheitsprofil kannst du außerdem selbst Werte festhalten, für die Apple Health keine Kategorie kennt oder die du von Hand messen möchtest: <strong>Ketonwerte</strong> (mit Einheit und Messmethode Blut, Atem oder Urin) sowie <strong>Beschwerden</strong> (Art, deine eigene Einschätzung der Stärke, Zeitpunkt, Notiz). Diese beiden gehen <strong>nicht</strong> nach Apple Health, weil es dort keinen passenden Datentyp gibt. Sie liegen in der App und, wenn du den iCloud-Sync eingeschaltet hast, in deiner privaten iCloud (Abschnitt 4).</p>
+  <p>Schaltest du den optionalen <strong>BioFlow</strong>-Bereich ein, kommen Zyklus- und Fertilitätsdaten hinzu: Menstruation, Zwischenblutungen, Ovulationstests, Zervixschleim, sexuelle Aktivität, Verhütung, Schwangerschaft und Schwangerschaftstests, Stillzeit, Hitzewallungen. Diese Daten sind besonders schutzwürdig. BioFlow ist deshalb standardmäßig ausgeschaltet, muss von dir aktiv eingeschaltet werden und lässt sich zusätzlich mit Face ID sperren.</p>
+  <p>BioPulse <strong>schreibt</strong> außerdem das nach HealthKit zurück, was du selbst einträgst: Wassermenge, Koffein, Kalorien und Nährwerte (Eiweiß, Kohlenhydrate, Fett), Körpergewicht, Basaltemperatur und deine BioFlow-Einträge. So stehen deine Eingaben auch anderen Apps zur Verfügung, denen du das erlaubst. Verweigerst du die Schreib-Freigabe, funktioniert die App genauso; deine Einträge bleiben dann in BioPulse.</p>
+  <p>Bei <strong>Blutzucker</strong> ist das Zurückschreiben zusätzlich an einen eigenen Schalter im Eingabefeld gebunden, der standardmäßig aus ist: Nach Apple Health geht ein Wert nur, wenn du ihn selbst eingetragen und diesen Schalter aktiv gesetzt hast. Werte, die von einem Sensor oder einer anderen App stammen, schreibt BioPulse nie zurück, und es passiert nie automatisch oder im Hintergrund.</p>
+  <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO i.V.m. Art. 9 Abs. 2 lit. a DSGVO. Lesen und Schreiben kannst du jederzeit einzeln in iOS-Einstellungen → Gesundheit → Datenzugriff widerrufen.</p>
   <h3>3.2 Manuell eingegebene Daten</h3>
-  <p>Stimmung, Tagebucheinträge, Wasseraufnahme, Gewichtseinträge — ausschließlich lokal gespeichert.</p>
+  <p>Stimmung, Tagebucheinträge, Wasseraufnahme, Gewichtseinträge, Supplemente, dein Essen und Trinken in BioFood (Abschnitt 3.6). Diese Einträge liegen in der App und, wenn du den iCloud-Sync eingeschaltet hast, in deiner privaten iCloud (Abschnitt 4). An uns wird nichts davon übertragen.</p>
   <h3>3.3 Profildaten</h3>
-  <p>Name, Geburtsdatum, Körpergröße, Gewichtsziel, Fitnessziele — nur lokal gespeichert.</p>
+  <p>Name, Geburtsdatum, Körpergröße, Gewichtsziel, Fitnessziele, falls du es einschaltest dein Kalorienziel, und falls du sie angibst die Erkrankungen aus Abschnitt 3.1. Diese Angaben liegen in der App und, wenn du den iCloud-Sync eingeschaltet hast, in deiner privaten iCloud (Abschnitt 4). An uns wird nichts davon übertragen.</p>
   <h3>3.4 WeatherKit / Standortdaten</h3>
   <p>Die App fragt optional deinen aktuellen Standort ab, um Wetterdaten für das Dashboard anzuzeigen (WeatherKit, Apple Inc.). Der Standort wird einmalig abgerufen, nicht gespeichert und nicht an Dritte weitergegeben. Der Wetterdienst wird ausschließlich durch Apple bereitgestellt.<br><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer kontextbezogenen Anzeige).</p>
   <h3>3.5 Anmeldung mit Apple (optional)</h3>
   <p>Wenn du dich mit „Mit Apple anmelden" registrierst, erhält die App eine anonymisierte Apple-User-ID. Diese ID wird ausschließlich lokal im Keychain deines Geräts gespeichert und nicht an externe Server übertragen. Apple verarbeitet die Authentifizierung nach eigenen Datenschutzrichtlinien (<a href="https://www.apple.com/de/privacy/" target="_blank">apple.com/privacy</a>).<br><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung).</p>
+  <h3>3.6 BioFood: Lebensmittel und Nährwerte</h3>
+  <p>Was du isst und trinkst, trägst du selbst ein. Diese Einträge (Name, Menge, Kalorien, Nährwerte, Koffein, Zeitpunkt) liegen wie alle anderen Daten lokal in der App und, wenn du den iCloud-Sync eingeschaltet hast, in deiner privaten iCloud. Auf deine Freigabe hin schreibt die App sie zusätzlich nach HealthKit (Abschnitt 3.1). An uns wird nichts davon übertragen.</p>
+  <p><strong>Kamera (Barcode-Scanner):</strong> Die Kamera liest ausschließlich Barcodes. Es wird kein Foto aufgenommen, gespeichert oder übertragen. Das Kamerabild verlässt dein Gerät nicht; es wird nur auf dem Gerät ausgewertet, um die Ziffernfolge des Barcodes zu erkennen. Die Kamera läuft nur, solange der Scanner geöffnet ist.</p>
+  <p><strong>Grundnahrungsmittel (offline):</strong> Die rund 7.000 Grundnahrungsmittel liegen als Datei in der App. Die Suche darin läuft vollständig auf dem Gerät, dabei entsteht keine Verbindung nach außen. Quelle: Max Rubner-Institut (2025), Bundeslebensmittelschlüssel 4.0, Lizenz CC BY 4.0.</p>
+  <p><strong>Verpackte Produkte (Open Food Facts):</strong> Scannst du einen Barcode oder suchst du nach einem Markenprodukt, fragt die App die offene Lebensmittel-Datenbank Open Food Facts ab. Übertragen wird dabei ausschließlich die gescannte Ziffernfolge bzw. dein Suchbegriff, sonst nichts: kein Name, kein Konto, keine Geräte- oder Werbekennung, keine Gesundheitsdaten, kein Standort, keine Information darüber, wer du bist oder was du sonst isst. Technisch unvermeidbar ist, dass deine IP-Adresse beim Server ankommt, wie bei jedem Aufruf einer Internetseite. Open Food Facts ist für diese Verarbeitung selbst verantwortlich und protokolliert IP-Adressen nach eigenen Angaben zu technischen Zwecken und für Nutzungsstatistiken.</p>
+  <p>Betreiber: Open Food Facts, association loi 1901, 21 rue des Îles, 94100 Saint-Maur-des-Fossés, Frankreich. Betreiber und Server sitzen nach dessen Angaben in Frankreich, die Anfrage verlässt die EU also nicht. <a href="https://world.openfoodfacts.org/privacy" target="_blank">Datenschutzerklärung von Open Food Facts</a></p>
+  <p>Die Abfrage erfolgt nur, wenn du scannst oder suchst, nie im Hintergrund und nie von allein. Die Produktdaten stehen unter der Open Database License (ODbL).<br><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Durchführung der von dir angeforderten Funktion). Ohne diese Abfrage lässt sich ein verpacktes Produkt nicht erkennen. Wenn du das nicht möchtest, nutze die Grundnahrungsmittel oder lege dein Lebensmittel selbst an, beides funktioniert ohne Internet.</p>
   <h2>4. Datenspeicherung</h2>
-  <h3>Option A — Nur lokal</h3>
-  <p>Alle Daten auf deinem iPhone in der verschlüsselten App-Datenbank. Kein Netzwerkzugriff.</p>
-  <h3>Option B — iCloud (mit Sign in with Apple)</h3>
-  <p>Synchronisation über Apple CloudKit. Daten sind Ende-zu-Ende verschlüsselt. Apple Inc. fungiert als Auftragsverarbeiter gemäß Art. 28 DSGVO. <a href="https://www.apple.com/de/privacy/" target="_blank">Apple Datenschutzerklärung</a></p>
+  <h3>Option A: Nur lokal</h3>
+  <p>Alle Daten auf deinem iPhone in der verschlüsselten App-Datenbank. Sie werden weder an uns noch an Dritte übertragen. Das heißt nicht, dass die App nie ins Netz geht: Wetter und Lebensmittelsuche brauchen eine Verbindung (Abschnitt 2). Deine gespeicherten Daten sind daran nicht beteiligt.</p>
+  <h3>Option B: iCloud-Sync (mit „Mit Apple anmelden", optional)</h3>
+  <p>Deine Daten werden zusätzlich in deiner privaten iCloud-Datenbank (Apple CloudKit) gespeichert und zwischen deinen Geräten synchronisiert. Übertragung und Speicherung erfolgen verschlüsselt; hast du auf deinem Gerät den erweiterten Datenschutz für iCloud aktiviert, sind die Daten Ende-zu-Ende verschlüsselt. Apple Inc. fungiert als Auftragsverarbeiter gemäß Art. 28 DSGVO. Du kannst den Sync jederzeit unter Einstellungen → Speicher &amp; iCloud beenden; deine Daten bleiben dann vollständig lokal erhalten. Zum vollständigen Löschen auch der iCloud-Kopie nutze „Alle Daten löschen" in der App, solange der Sync aktiv ist (Löschungen werden in die Cloud übernommen), oder entferne die BioPulse-Daten in den iOS-Einstellungen unter iCloud → Speicher verwalten. <a href="https://www.apple.com/de/privacy/" target="_blank">Apple Datenschutzerklärung</a></p>
   <h2>5. Keine Weitergabe an Dritte</h2>
   <p>Keine Datenweitergabe. Keine Werbung. Kein Data-Mining.</p>
+  <p>Vollständigkeitshalber: Die einzigen Daten, die überhaupt an Dritte gehen, sind die in den Abschnitten 3.4 und 3.6 beschriebenen Abfragen bei Apple (Wetter) und Open Food Facts (Lebensmittel). Weder Gesundheitsdaten noch Profil- oder Tagebuchdaten sind daran beteiligt.</p>
+  <h3>5.1 Der Bericht für den Arzt (du entscheidest, wohin er geht)</h3>
+  <p>Im Gesundheitsprofil kannst du deine Daten als PDF zusammenstellen, um sie beim Arztbesuch vorzulegen. Die Datei wird vollständig auf deinem Gerät erzeugt, ohne Internetverbindung. Sie wird nicht an uns und an keinen Server übertragen.</p>
+  <p>Danach übergibt die App die Datei an das Teilen-Fenster von iOS. Wohin sie geht, entscheidest allein du: Mail, Nachrichten, Dateien, AirDrop, Drucken. Ab diesem Schritt gilt die Datenschutzerklärung des Dienstes, den du auswählst; darauf haben wir keinen Einfluss.</p>
+  <p>Du bestimmst auch den Inhalt: Alle Abschnitte des Berichts sind einzeln abwählbar, den Zeitraum wählst du, und dein Name samt Geburtsdatum steht nur dann darin, wenn du das ausdrücklich einschaltest (standardmäßig aus). Sind Erkrankungen im Profil angegeben, erscheinen sie im Bericht.</p>
+  <p>Technischer Hinweis zur Vollständigkeit: Die fertige Datei wird in den temporären Ordner der App gelegt. Diesen Ordner räumt iOS selbst auf; beim Löschen der App verschwindet er mit.</p>
   <h2>6. Kein Tracking</h2>
   <p>Die Beta-Version enthält kein Analyse-Framework und kein Tracking.</p>
   <p>Apple stellt uns aggregierte, anonymisierte Nutzungsstatistiken über den App Store bereit (z. B. Download-Zahlen). Wir haben keinen Zugriff auf personenbezogene Nutzerdaten.</p>
@@ -121,6 +142,27 @@
   <h2>10. Änderungen</h2>
   <p>Wesentliche Änderungen werden in der App angekündigt. Aktuelle Version: <a href="https://biopulse-health.de/privacy">biopulse-health.de/privacy</a></p>
 
+  <hr class="divider" id="terms">
+
+  <h1>Nutzungsbedingungen</h1>
+  <p class="meta">Stand: Juni 2026</p>
+  <h2>1. Anbieter</h2>
+  <p>Steven Daul, Auf dem Klint 2, 29227 Celle<br>(Kleingewerbe, nicht im Handelsregister eingetragen)</p>
+  <h2>2. Leistungsbeschreibung</h2>
+  <p>BioPulse ist eine iOS-App zur persönlichen Gesundheits- und Fitnessübersicht.</p>
+  <h2>3. Kein Medizinprodukt</h2>
+  <p>BioPulse ist kein Medizinprodukt im Sinne der EU-Medizinprodukteverordnung (MDR 2017/745) und ersetzt keine ärztliche Beratung oder Diagnose. Alle Daten dienen ausschließlich der persönlichen Information. Bei gesundheitlichen Beschwerden wende dich an einen Arzt.</p>
+  <h2>4. Mindestalter</h2>
+  <p>Die Nutzung ist ab 16 Jahren gestattet.</p>
+  <h2>5. Nutzungsrechte</h2>
+  <p>Du erhältst ein nicht-exklusives, nicht-übertragbares Recht zur privaten Nutzung der App.</p>
+  <h2>6. Haftung</h2>
+  <p>Für die Richtigkeit der aus HealthKit bezogenen Daten übernehmen wir keine Haftung. Die Daten werden von Apple und dem jeweiligen Gerät erfasst und verarbeitet.</p>
+  <h2>7. Anwendbares Recht</h2>
+  <p>Es gilt deutsches Recht.<br>Gerichtsstand: Celle, Deutschland.</p>
+  <h2>8. Änderungen</h2>
+  <p>Änderungen dieser Nutzungsbedingungen werden in der App angekündigt. Aktuelle Version immer unter <a href="https://biopulse-health.de/privacy#terms">biopulse-health.de/privacy#terms</a></p>
+
   <hr class="divider" id="impressum">
 
   <h1>Impressum</h1>
@@ -128,7 +170,7 @@
   <h2>Anbieter</h2>
   <p>Steven Daul<br>Auf dem Klint 2<br>29227 Celle<br>Deutschland<br>E-Mail: <a href="mailto:biopulsehealthappsupport@gmail.com">biopulsehealthappsupport@gmail.com</a><br>Tel.: 015678 558330</p>
   <h2>Rechtliche Hinweise</h2>
-  <p>Kleingewerbetreibender — nicht im Handelsregister eingetragen.<br>Keine Umsatzsteuer-Identifikationsnummer (Kleinunternehmerregelung gemäß § 19 UStG).</p>
+  <p>Kleingewerbetreibender, nicht im Handelsregister eingetragen.<br>Keine Umsatzsteuer-Identifikationsnummer (Kleinunternehmerregelung gemäß § 19 UStG).</p>
   <h2>Inhaltlich verantwortlich</h2>
   <p>Steven Daul (Anschrift wie oben) gemäß § 18 Abs. 2 MStV</p>
   <h2>Streitschlichtung</h2>
@@ -140,26 +182,47 @@
 <!-- ENGLISH -->
 <div class="content" id="en" style="display:none;">
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: June 2026 · BioPulse Beta v1.0</p>
+  <p class="meta">Last updated: July 2026</p>
   <div class="highlight"><p>🔐 Short version: BioPulse does not store your data on its own servers. Everything stays on your device or in your personal iCloud. We have no access.</p></div>
   <h2>1. Controller</h2>
   <p>Steven Daul<br>Auf dem Klint 2, 29227 Celle, Germany<br>Email: <a href="mailto:biopulsehealthappsupport@gmail.com">biopulsehealthappsupport@gmail.com</a></p>
   <h2>2. Core principle: No own servers</h2>
-  <p>BioPulse operates no servers or databases of its own. All personal data remains on your iPhone or in your personal iCloud. We have no access to your data.</p>
+  <p>BioPulse operates no servers and no databases of its own. There is no user account with us and no place where we could view your data. All personal data remains on your iPhone or in your personal iCloud.</p>
+  <p>There are three points where the app cannot work without the internet: iCloud sync, if you enable it (section 4), the weather display (section 3.4), and the food search in BioFood (section 3.6). What is transmitted in each case is described in those sections. Your health data is not involved in the weather display or the food search.</p>
   <h2>3. What data is processed</h2>
   <h3>3.1 Health data (Art. 9 GDPR)</h3>
-  <p>With your explicit consent, BioPulse accesses Apple HealthKit data including heart rate, HRV, sleep, activity, body measurements, SpO₂, respiratory rate, body temperature, VO₂max, and workout data.</p>
-  <p><strong>Legal basis:</strong> Art. 6(1)(a) and Art. 9(2)(a) GDPR. Withdraw consent in iOS Settings → Health → Data Access.</p>
+  <p>With your explicit consent, BioPulse reads Apple HealthKit data including heart rate, HRV, resting heart rate, blood pressure, blood glucose, sleep, activity, body measurements, SpO₂, respiratory rate, body temperature, VO₂max, workout data (with GPS route if you choose), and your date of birth. Blood glucose is also read when it was written to Apple Health by a sensor (CGM) or another app.</p>
+  <p>If you enter conditions or health states in the optional <strong>health profile</strong> (e.g. diabetes), that information is also particularly sensitive. It is voluntary, off by default, serves only to document and prepare values for your doctor (no evaluation, no diagnosis), and can be changed or deleted at any time. Only a coarse entry you pick from a list is recorded, no diagnostic codes and no disease stage.</p>
+  <p>The health profile also lets you record values yourself that Apple Health has no category for, or that you prefer to measure by hand: <strong>ketone readings</strong> (with unit and measurement method blood, breath or urine) and <strong>symptoms</strong> (type, your own assessment of severity, time, note). These two do <strong>not</strong> go to Apple Health, because there is no matching data type there. They are stored in the app and, if you have enabled iCloud sync, in your private iCloud (section 4).</p>
+  <p>If you enable the optional <strong>BioFlow</strong> section, cycle and fertility data is added: menstruation, intermenstrual bleeding, ovulation tests, cervical mucus, sexual activity, contraception, pregnancy and pregnancy tests, lactation, hot flashes. This data is particularly sensitive. BioFlow is therefore off by default, has to be enabled by you, and can additionally be locked with Face ID.</p>
+  <p>BioPulse also <strong>writes</strong> back to HealthKit what you enter yourself: water intake, caffeine, calories and nutrients (protein, carbohydrates, fat), body weight, basal body temperature, and your BioFlow entries. This makes your entries available to other apps you allow. If you decline write access, the app works just the same; your entries then stay within BioPulse.</p>
+  <p>For <strong>blood glucose</strong>, writing back is additionally tied to a separate switch in the input field which is off by default: a value only goes to Apple Health if you entered it yourself and actively set that switch. Values coming from a sensor or another app are never written back by BioPulse, and it never happens automatically or in the background.</p>
+  <p><strong>Legal basis:</strong> Art. 6(1)(a) and Art. 9(2)(a) GDPR. Revoke read and write access individually in iOS Settings → Health → Data Access.</p>
   <h3>3.2 Manually entered data</h3>
-  <p>Mood, diary entries, water intake, weight — stored locally only.</p>
-  <h3>3.3 WeatherKit / Location data</h3>
+  <p>Mood, diary entries, water intake, weight, supplements, your food and drink in BioFood (section 3.6). These entries are stored in the app and, if you have enabled iCloud sync, in your private iCloud (section 4). None of it is transmitted to us.</p>
+  <h3>3.3 Profile data</h3>
+  <p>Name, date of birth, height, weight goal, fitness goals, your calorie goal if you enable it, and the conditions from section 3.1 if you provide them. This information is stored in the app and, if you have enabled iCloud sync, in your private iCloud (section 4). None of it is transmitted to us.</p>
+  <h3>3.4 WeatherKit / Location data</h3>
   <p>The app optionally requests your current location to display weather data on the dashboard (WeatherKit, Apple Inc.). The location is retrieved once, not stored, and not shared with third parties. The weather service is provided exclusively by Apple.<br><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest in a context-aware display).</p>
-  <h3>3.4 Sign in with Apple (optional)</h3>
+  <h3>3.5 Sign in with Apple (optional)</h3>
   <p>If you register using "Sign in with Apple", the app receives an anonymized Apple user ID. This ID is stored exclusively in your device's local Keychain and is not transmitted to external servers. Apple processes the authentication under its own privacy policy (<a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>).<br><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (performance of a contract).</p>
+  <h3>3.6 BioFood: food and nutrition</h3>
+  <p>What you eat and drink is entered by you. These entries (name, amount, calories, nutrients, caffeine, time) are stored locally in the app like all other data and, if you have enabled iCloud sync, in your private iCloud. With your permission, the app additionally writes them to HealthKit (section 3.1). None of it is transmitted to us.</p>
+  <p><strong>Camera (barcode scanner):</strong> The camera reads barcodes only. No photo is taken, stored, or transmitted. The camera image does not leave your device; it is evaluated on the device solely to recognize the barcode's sequence of digits. The camera runs only while the scanner is open.</p>
+  <p><strong>Basic foods (offline):</strong> The roughly 7,000 basic foods are stored as a file inside the app. Searching them runs entirely on the device, with no outbound connection. Source: Max Rubner-Institut (2025), Bundeslebensmittelschlüssel 4.0, licence CC BY 4.0.</p>
+  <p><strong>Packaged products (Open Food Facts):</strong> If you scan a barcode or search for a branded product, the app queries the open food database Open Food Facts. Only the scanned sequence of digits or your search term is transmitted, nothing else: no name, no account, no device or advertising identifier, no health data, no location, no information about who you are or what else you eat. It is technically unavoidable that your IP address reaches the server, as with any website you open. Open Food Facts is itself responsible for that processing and, by its own account, logs IP addresses for technical purposes and usage statistics.</p>
+  <p>Operator: Open Food Facts, association loi 1901, 21 rue des Îles, 94100 Saint-Maur-des-Fossés, France. According to the operator, both the organization and its servers are located in France, so the request does not leave the EU. <a href="https://world.openfoodfacts.org/privacy" target="_blank">Open Food Facts privacy policy</a></p>
+  <p>The query happens only when you scan or search, never in the background and never on its own. The product data is licensed under the Open Database License (ODbL).<br><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (carrying out the function you requested). Without this query, a packaged product cannot be identified. If you prefer not to use it, use the basic foods or create your own food item, both of which work without an internet connection.</p>
   <h2>4. Data storage</h2>
-  <p><strong>Local:</strong> Encrypted on-device database, no network access.<br><strong>iCloud (optional):</strong> Apple CloudKit, end-to-end encrypted. Apple Inc. acts as data processor. <a href="https://www.apple.com/privacy/" target="_blank">Apple Privacy Policy</a></p>
+  <p><strong>Local:</strong> Encrypted on-device database. Your stored data is transmitted neither to us nor to third parties. This does not mean the app never goes online: the weather display and the food search need a connection (section 2).<br><strong>iCloud (optional):</strong> Apple CloudKit, end-to-end encrypted. Apple Inc. acts as data processor. <a href="https://www.apple.com/privacy/" target="_blank">Apple Privacy Policy</a></p>
   <h2>5. No third-party sharing</h2>
   <p>No data sharing. No advertising. No data mining.</p>
+  <p>For completeness: the only data that goes to third parties at all are the queries described in sections 3.4 and 3.6, to Apple (weather) and Open Food Facts (food). No health, profile, or diary data is involved in either.</p>
+  <h3>5.1 The report for your doctor (you decide where it goes)</h3>
+  <p>In the health profile you can compile your data as a PDF to bring to a doctor's appointment. The file is created entirely on your device, without an internet connection. It is not transmitted to us or to any server.</p>
+  <p>The app then hands the file to the iOS share sheet. Where it goes is your decision alone: Mail, Messages, Files, AirDrop, printing. From that step onwards the privacy policy of the service you pick applies; we have no influence over it.</p>
+  <p>You also control the content: every section of the report can be deselected individually, you choose the period, and your name and date of birth are included only if you explicitly enable that (off by default). If conditions are listed in your profile, they appear in the report.</p>
+  <p>Technical note for completeness: the finished file is placed in the app's temporary folder. iOS clears that folder itself; deleting the app removes it as well.</p>
   <h2>6. No tracking</h2>
   <p>The beta contains no analytics framework and no tracking.</p>
   <p>Apple provides us with aggregated, anonymized usage statistics via the App Store (e.g. download numbers). We have no access to personal user data.</p>
@@ -169,12 +232,33 @@
   <p>Supervisory authority for Lower Saxony, Germany: Die Landesbeauftragte für den Datenschutz Niedersachsen, Prinzenstraße 5, 30159 Hanover.</p>
   <h2>9. Age requirement</h2>
   <p>BioPulse is for users aged 16+ (Art. 8 GDPR).</p>
+  <h2>10. Changes</h2>
+  <p>Material changes are announced in the app. Current version: <a href="https://biopulse-health.de/privacy">biopulse-health.de/privacy</a></p>
+  <hr class="divider">
+  <h1>Terms of Use</h1>
+  <p class="meta">Last updated: June 2026</p>
+  <h2>1. Provider</h2>
+  <p>Steven Daul, Auf dem Klint 2, 29227 Celle, Germany<br>(Sole trader, not registered in the commercial register)</p>
+  <h2>2. Service description</h2>
+  <p>BioPulse is an iOS app for personal health and fitness overview.</p>
+  <h2>3. Not a medical device</h2>
+  <p>BioPulse is not a medical device within the meaning of the EU Medical Device Regulation (MDR 2017/745) and does not replace medical advice or diagnosis. All data is for personal information purposes only. If you have health concerns, consult a doctor.</p>
+  <h2>4. Minimum age</h2>
+  <p>Use is permitted from the age of 16.</p>
+  <h2>5. Rights of use</h2>
+  <p>You receive a non-exclusive, non-transferable right to use the app for private purposes.</p>
+  <h2>6. Liability</h2>
+  <p>We accept no liability for the accuracy of data obtained from HealthKit. The data is collected and processed by Apple and the respective device.</p>
+  <h2>7. Applicable law</h2>
+  <p>German law applies.<br>Place of jurisdiction: Celle, Germany.</p>
+  <h2>8. Amendments</h2>
+  <p>Amendments to these terms of use will be announced in the app. Current version always at <a href="https://biopulse-health.de/privacy#terms">biopulse-health.de/privacy#terms</a></p>
   <hr class="divider">
   <h1>Legal Notice</h1>
   <p class="meta">Pursuant to § 5 DDG (German Digital Services Act)</p>
   <h2>Provider</h2>
   <p>Steven Daul<br>Auf dem Klint 2, 29227 Celle, Germany<br>Email: <a href="mailto:biopulsehealthappsupport@gmail.com">biopulsehealthappsupport@gmail.com</a><br>Phone: +49 15678 558330</p>
-  <p>Sole trader — not registered in the commercial register. No VAT ID (§ 19 UStG small business).</p>
+  <p>Sole trader, not registered in the commercial register. No VAT ID (§ 19 UStG small business).</p>
   <h2>Medical Disclaimer</h2>
   <div class="highlight"><p>⚕️ BioPulse is not a medical device (MDR 2017/745) and does not replace medical advice, diagnosis, or treatment. All health data is for personal information only. Consult a doctor for health concerns.</p></div>
 </div>
