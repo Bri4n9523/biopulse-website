@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="BioPulse: Die Health-App die deine Apple Watch wirklich versteht. Schlaf, Herz, Training, Journal, alles in einer App.">
   <title>BioPulse: Deine Gesundheit, verstanden.</title>
+  <!-- Setzt html.js, BEVOR das Stylesheet greift. Nur dann wird die Galerie
+       ueberhaupt erst ausgeblendet und danach eingeblendet. Ohne JavaScript
+       bleibt die Klasse aus und die Bilder sind von Anfang an sichtbar.
+       Muss hier oben stehen: weiter unten gaebe es ein kurzes Aufblitzen. -->
+  <script>document.documentElement.className += ' js';</script>
   <style>
     :root {
       --bg: #0A0A0C;
@@ -295,7 +300,7 @@
       padding: 48px 32px 32px;
       border-top: 1px solid var(--border);
       display: flex; justify-content: space-between;
-      align-items: center; flex-wrap: gap;
+      align-items: center;
       max-width: 1100px; margin: 0 auto;
       gap: 24px; flex-wrap: wrap;
     }
@@ -335,13 +340,22 @@
     .shot {
       flex: 0 0 auto; width: 240px;
       scroll-snap-align: center;
-      /* Startzustand des Einblendens. Wird per JS aufgehoben -- und wenn
-         JavaScript aus ist, hebt ihn die .kein-js-Regel weiter unten sofort
-         auf. Ohne die waere die Galerie unsichtbar statt nur unbewegt. */
+    }
+    /* DER STARTZUSTAND HAENGT AN html.js, UND ZWAR ABSICHTLICH.
+       Die Klasse setzt ein winziges Skript im <head>. Ohne JavaScript wird sie
+       nie gesetzt, diese Regel greift nicht, und die Bilder sind schlicht da --
+       ohne Bewegung, aber sichtbar.
+
+       Die erste Fassung hatte opacity:0 direkt auf .shot und einen Kommentar,
+       der eine .kein-js-Regel behauptete. Die Regel gab es nie. Ohne
+       JavaScript waeren elf leere Kaesten zu sehen gewesen, und der Kommentar
+       haette verhindert, dass jemand danach sucht. Gefunden am 2026-08-09 in
+       einer Gegenpruefung. */
+    html.js .shot {
       opacity: 0; transform: translateY(24px);
       transition: opacity .7s ease, transform .7s ease;
     }
-    .shot.sichtbar { opacity: 1; transform: none; }
+    html.js .shot.sichtbar { opacity: 1; transform: none; }
     .shot-frame {
       border: 1px solid var(--border); border-radius: 26px;
       overflow: hidden; background: var(--card);
@@ -385,8 +399,10 @@
     @media (prefers-reduced-motion: reduce) {
       .hero-blob, .eyebrow-dot { animation: none; }
       /* Kein Hineinfahren, kein Anheben. Die Bilder bleiben trotzdem da --
-         es entfaellt die Bewegung, nicht der Inhalt. */
-      .shot { opacity: 1; transform: none; transition: none; }
+         es entfaellt die Bewegung, nicht der Inhalt. Der Selektor braucht
+         html.js, weil der Startzustand jetzt dort haengt und diese Regel ihn
+         sonst nicht ueberschreibt. */
+      html.js .shot { opacity: 1; transform: none; transition: none; }
       .shot-frame, .shot-frame:hover { transition: none; transform: none; }
     }
   </style>
@@ -661,37 +677,47 @@
 
 <script>
 /* Galerie: die Bilder fahren beim Hereinscrollen ein.
-   Zwei Dinge, die hier absichtlich so stehen:
 
-   1. Ohne JavaScript bleiben die Bilder SICHTBAR. Der Startzustand im CSS
-      ist opacity:0 -- ohne diese Zeile waere die Galerie bei abgeschaltetem
-      JavaScript einfach leer. Deshalb wird zuerst entsperrt und erst danach
-      wieder abgedunkelt, und zwar nur, wenn der Beobachter wirklich existiert.
-   2. Wer Bewegung reduziert hat, bekommt gar keine. Die Medienabfrage im CSS
-      deckt das ab; hier wird zusaetzlich der Beobachter uebersprungen, damit
-      kein Zustand haengen bleibt. */
+   WER DEN AUSGEBLENDETEN ZUSTAND UEBERHAUPT SIEHT: nur wer JavaScript hat.
+   Die Klasse html.js wird oben im <head> gesetzt, und erst sie aktiviert
+   opacity:0 im Stylesheet. Ohne JavaScript gibt es keine Klasse, keinen
+   Startzustand und nichts zu reparieren -- die Bilder stehen einfach da.
+
+   WER BEWEGUNG REDUZIERT HAT, bekommt gar keine: das CSS setzt sie sichtbar,
+   und hier wird der Beobachter zusaetzlich uebersprungen, damit kein Zustand
+   haengen bleibt. */
 (function () {
-  var bilder = document.querySelectorAll('.shot');
+  // Array.prototype.slice statt NodeList.forEach: Der Zweig unten existiert
+  // fuer alte Browser OHNE IntersectionObserver -- und genau denen fehlt oft
+  // auch NodeList.forEach. Die Rettungszeile haette dort geworfen und die
+  // Galerie leer gelassen. Gefunden in der Gegenpruefung am 2026-08-09.
+  var bilder = Array.prototype.slice.call(document.querySelectorAll('.shot'));
   if (!bilder.length) return;
+
+  function zeigen(el) { el.className += ' sichtbar'; }
 
   var wenigerBewegung = window.matchMedia &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (wenigerBewegung || !('IntersectionObserver' in window)) {
-    bilder.forEach(function (b) { b.classList.add('sichtbar'); });
+    for (var i = 0; i < bilder.length; i++) zeigen(bilder[i]);
     return;
   }
 
   var beobachter = new IntersectionObserver(function (eintraege) {
-    eintraege.forEach(function (e, i) {
-      if (!e.isIntersecting) return;
-      // Kleiner Versatz, damit sie nacheinander kommen statt alle zugleich.
-      setTimeout(function () { e.target.classList.add('sichtbar'); }, i * 70);
-      beobachter.unobserve(e.target);
-    });
+    // Der Versatz gilt innerhalb EINER Meldung. Beim seitlichen Wischen kommen
+    // die Bilder einzeln, dann ist er wirkungslos -- gewollt ist er fuer den
+    // Fall, dass beim Herunterscrollen mehrere zugleich ins Bild rutschen.
+    for (var n = 0; n < eintraege.length; n++) {
+      (function (e, versatz) {
+        if (!e.isIntersecting) return;
+        setTimeout(function () { zeigen(e.target); }, versatz * 70);
+        beobachter.unobserve(e.target);
+      })(eintraege[n], n);
+    }
   }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
-  bilder.forEach(function (b) { beobachter.observe(b); });
+  for (var k = 0; k < bilder.length; k++) beobachter.observe(bilder[k]);
 })();
 </script>
 
