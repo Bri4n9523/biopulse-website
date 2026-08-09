@@ -319,6 +319,58 @@
       margin-top: 16px;
     }
 
+    /* GALERIE */
+    .shots-rail {
+      display: flex; gap: 20px;
+      overflow-x: auto; scroll-snap-type: x mandatory;
+      padding: 8px 4px 28px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+      -webkit-overflow-scrolling: touch;
+    }
+    .shots-rail::-webkit-scrollbar { height: 8px; }
+    .shots-rail::-webkit-scrollbar-thumb {
+      background: var(--border); border-radius: 4px;
+    }
+    .shot {
+      flex: 0 0 auto; width: 240px;
+      scroll-snap-align: center;
+      /* Startzustand des Einblendens. Wird per JS aufgehoben -- und wenn
+         JavaScript aus ist, hebt ihn die .kein-js-Regel weiter unten sofort
+         auf. Ohne die waere die Galerie unsichtbar statt nur unbewegt. */
+      opacity: 0; transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .shot.sichtbar { opacity: 1; transform: none; }
+    .shot-frame {
+      border: 1px solid var(--border); border-radius: 26px;
+      overflow: hidden; background: var(--card);
+      box-shadow: 0 18px 50px rgba(0,0,0,.55);
+      transition: transform .35s ease, border-color .35s ease;
+    }
+    .shot-frame:hover {
+      transform: translateY(-6px);
+      border-color: rgba(167,139,250,.45);
+    }
+    .shot-frame img { display: block; width: 100%; height: auto; }
+    .shot-caption {
+      margin-top: 14px; text-align: center;
+      font-size: 14px; font-weight: 600; color: var(--text);
+    }
+    .shot-sub {
+      text-align: center; font-size: 13px;
+      color: var(--text-sec); margin-top: 2px;
+    }
+    .shots-hint {
+      text-align: center; color: var(--text-ter);
+      font-size: 13px; margin-top: 4px;
+    }
+    .shots-fuss {
+      max-width: 680px; margin: 28px auto 0;
+      text-align: center; font-size: 13px;
+      color: var(--text-ter); line-height: 1.7;
+    }
+
     @media (max-width: 768px) {
       nav { padding: 14px 20px; }
       .nav-links { display: none; }
@@ -327,10 +379,15 @@
       .diff-cell:last-child { border-radius: 0 0 18px 18px; }
       .stripe-inner { grid-template-columns: 1fr; gap: 40px; }
       footer { flex-direction: column; align-items: flex-start; }
+      .shot { width: 200px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       .hero-blob, .eyebrow-dot { animation: none; }
+      /* Kein Hineinfahren, kein Anheben. Die Bilder bleiben trotzdem da --
+         es entfaellt die Bewegung, nicht der Inhalt. */
+      .shot { opacity: 1; transform: none; transition: none; }
+      .shot-frame, .shot-frame:hover { transition: none; transform: none; }
     }
   </style>
 </head>
@@ -451,6 +508,125 @@
   </div>
 </section>
 
+<section class="section" id="screenshots">
+
+  <h2 class="section-title">So sieht sie aus</h2>
+  <p class="shots-hint">Zum Blättern seitwärts wischen oder scrollen</p>
+
+  <div class="shots-rail" id="shotsRail">
+
+    <figure class="shot">
+      <div class="shot-frame">
+        <img src="/screenshots/01-dashboard.webp" width="570" height="1240" loading="lazy" decoding="async"
+             alt="Dashboard mit Begrüßung, Wetter, den drei Ringen für Schlaf, Erholung und Belastung sowie Energie- und Stress-Score.">
+      </div>
+      <figcaption class="shot-caption">Dashboard</figcaption>
+      <div class="shot-sub">Drei Ringe, ein Blick</div>
+    </figure>
+
+    <figure class="shot">
+      <div class="shot-frame">
+        <img src="/screenshots/02-gesundheit-schlaf.webp" width="570" height="1240" loading="lazy" decoding="async"
+             alt="Schlafansicht mit Score, Dauer und den Schlafphasen Kern, Tief, REM und Wach als Ring.">
+      </div>
+      <figcaption class="shot-caption">Schlaf</figcaption>
+      <div class="shot-sub">Phasen statt nur Stunden</div>
+    </figure>
+
+    <figure class="shot">
+      <div class="shot-frame">
+        <img src="/screenshots/03-gesundheit-herz.webp" width="570" height="1240" loading="lazy" decoding="async"
+             alt="Herzansicht mit Puls, Ruhe-Herzfrequenz, Herzratenvariabilität, Kardiofitness, Blutsauerstoff und Atemfrequenz.">
+      </div>
+      <figcaption class="shot-caption">Herz</figcaption>
+      <div class="shot-sub">HRV, Ruhepuls, Kardiofitness</div>
+    </figure>
+
+    <figure class="shot">
+      <div class="shot-frame">
+        <img src="/screenshots/04-gesundheit-vitalwerte.webp" width="570" height="1240" loading="lazy" decoding="async"
+             alt="Vitalwerte mit biologischem Alter und den vier Faktoren VO2max, HRV, Ruhepuls und Schlaf.">
+      </div>
+      <figcaption class="shot-caption">Vitalwerte</figcaption>
+      <div class="shot-sub">Woraus sich dein Wert ergibt</div>
+    </figure>
+
+    <figure class="shot">
+      <div class="shot-frame">
+        <img src="/screenshots/05-gesundheit-aktivitaet.webp" width="570" height="1240" loading="lazy" decoding="async"
+             alt="Aktivitätsansicht mit Ringen, Schritten und aktiven Kalorien.">
+      </div>
+      <figcaption class="shot-caption">Aktivität</figcaption>
+      <div class="shot-sub">Bewegung im Tagesverlauf</div>
+    </figure>
+
+    <figure class="shot">
+      <div class="shot-frame">
+        <img src="/screenshots/06-journal-stimmung.webp" width="570" height="1240" loading="lazy" decoding="async"
+             alt="Journal mit Stimmungsblase und Reglern für Stimmung und Energie.">
+      </div>
+      <figcaption class="shot-caption">Journal</figcaption>
+      <div class="shot-sub">Wie es dir geht, ohne Note</div>
+    </figure>
+
+    <figure class="shot">
+      <div class="shot-frame">
+        <img src="/screenshots/06b-journal-tracking.webp" width="570" height="1240" loading="lazy" decoding="async"
+             alt="Journal mit Fortschrittsbalken für Getränke, Koffein und Protein samt Schnelleingabe.">
+      </div>
+      <figcaption class="shot-caption">Tagesziele</figcaption>
+      <div class="shot-sub">Trinken, Koffein, Protein</div>
+    </figure>
+
+    <figure class="shot">
+      <div class="shot-frame">
+        <img src="/screenshots/07-training.webp" width="570" height="1240" loading="lazy" decoding="async"
+             alt="Trainingsansicht mit Belastung der Woche, Intensivminuten und einem Vorschlag für heute.">
+      </div>
+      <figcaption class="shot-caption">Training</figcaption>
+      <div class="shot-sub">Belastung statt Bauchgefühl</div>
+    </figure>
+
+    <figure class="shot">
+      <div class="shot-frame">
+        <img src="/screenshots/07b-training-gymlog.webp" width="570" height="1240" loading="lazy" decoding="async"
+             alt="Gym Log mit drei Einheiten samt Dauer und bewegtem Volumen.">
+      </div>
+      <figcaption class="shot-caption">Gym Log</figcaption>
+      <div class="shot-sub">Jede Einheit, jedes Volumen</div>
+    </figure>
+
+    <figure class="shot">
+      <div class="shot-frame">
+        <img src="/screenshots/08-biofood.webp" width="570" height="1240" loading="lazy" decoding="async"
+             alt="BioFood mit Tageskalorien, Makronährstoffen und den Mahlzeiten des Tages.">
+      </div>
+      <figcaption class="shot-caption">BioFood</figcaption>
+      <div class="shot-sub">Eintragen, nicht bewerten</div>
+    </figure>
+
+    <figure class="shot">
+      <div class="shot-frame">
+        <img src="/screenshots/09-bioflow.webp" width="570" height="1240" loading="lazy" decoding="async"
+             alt="BioFlow mit Zyklustag, Phase, Vorhersage und Monatskalender.">
+      </div>
+      <figcaption class="shot-caption">BioFlow</figcaption>
+      <!-- Der Satz steht wortgleich in der App und wird dort beim Einrichten
+           bestaetigt. In der Galerie fehlt dieser Zusammenhang, deshalb steht
+           er hier direkt am Bild. Nicht abschwaechen, nicht in den Konjunktiv
+           setzen: Entscheidung der BioPulse-iOS-Sitzung am 2026-08-09. -->
+      <div class="shot-sub"><strong>BioFlow ist kein Verhütungsmittel.</strong></div>
+    </figure>
+
+  </div>
+
+  <p class="shots-fuss">
+    Aufnahmen aus der laufenden Beta auf einem iPhone 17 Pro, dunkler Modus.
+    Alle gezeigten Werte sind Testdaten, keine Daten einer echten Person.
+  </p>
+
+</section>
+
 <div class="stripe">
   <div class="stripe-inner">
     <div class="stripe-quote">
@@ -478,10 +654,46 @@
     <li><a href="/support.html#terms">Nutzungsbedingungen</a></li>
   </ul>
   <div class="footer-copy">
-    © 2026 Steven Daul · Celle, Deutschland · Beta v1.0 ·
+    © 2026 Steven Daul · Celle, Deutschland · Beta v2.5 ·
     <a href="mailto:biopulsehealthappsupport@gmail.com" style="color:var(--text-sec);text-decoration:none;">biopulsehealthappsupport@gmail.com</a>
   </div>
 </footer>
+
+<script>
+/* Galerie: die Bilder fahren beim Hereinscrollen ein.
+   Zwei Dinge, die hier absichtlich so stehen:
+
+   1. Ohne JavaScript bleiben die Bilder SICHTBAR. Der Startzustand im CSS
+      ist opacity:0 -- ohne diese Zeile waere die Galerie bei abgeschaltetem
+      JavaScript einfach leer. Deshalb wird zuerst entsperrt und erst danach
+      wieder abgedunkelt, und zwar nur, wenn der Beobachter wirklich existiert.
+   2. Wer Bewegung reduziert hat, bekommt gar keine. Die Medienabfrage im CSS
+      deckt das ab; hier wird zusaetzlich der Beobachter uebersprungen, damit
+      kein Zustand haengen bleibt. */
+(function () {
+  var bilder = document.querySelectorAll('.shot');
+  if (!bilder.length) return;
+
+  var wenigerBewegung = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (wenigerBewegung || !('IntersectionObserver' in window)) {
+    bilder.forEach(function (b) { b.classList.add('sichtbar'); });
+    return;
+  }
+
+  var beobachter = new IntersectionObserver(function (eintraege) {
+    eintraege.forEach(function (e, i) {
+      if (!e.isIntersecting) return;
+      // Kleiner Versatz, damit sie nacheinander kommen statt alle zugleich.
+      setTimeout(function () { e.target.classList.add('sichtbar'); }, i * 70);
+      beobachter.unobserve(e.target);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  bilder.forEach(function (b) { beobachter.observe(b); });
+})();
+</script>
 
 </body>
 </html>
