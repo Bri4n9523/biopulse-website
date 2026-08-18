@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    Weiterleitung auf /privacy.html#impressum
+
+    WARUM ES DIESE DATEI GIBT (2026-08-18)
+    Diese Adresse lieferte 404, war aber an anderer Stelle eingetragen (App Store Connect).
+    Wer im App Store auf die Datenschutzerklaerung tippte, landete auf einer Fehlerseite --
+    Apple prueft diese URL beim Review, und die Erklaerung muss erreichbar sein.
+
+    OHNE JAVASCRIPT, mit Absicht: meta refresh wirkt auch bei abgeschaltetem JS. Auf dieser
+    Seite war schon einmal ein Bereich ohne JavaScript unsichtbar (Commit 3e2fff3), und eine
+    Rechtsseite ist der falsche Ort, um diesen Fehler zu wiederholen. Der sichtbare Link
+    unten traegt zusaetzlich, falls auch meta refresh unterbunden ist.
+  -->
+  <meta http-equiv="refresh" content="0; url=/privacy.html#impressum">
+  <link rel="canonical" href="https://biopulse-health.de/privacy.html#impressum">
+  <title>Impressum · BioPulse</title>
+  <style>
+    :root { --bg: #0A0A0C; --text: #FFFFFF; --text-sec: #8E8E93; --insights: #00D4FF; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+      line-height: 1.7; -webkit-font-smoothing: antialiased;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 100vh; padding: 24px; text-align: center;
+    }
+    p { color: var(--text-sec); margin-bottom: 16px; }
+    a { color: var(--insights); }
+  </style>
+</head>
+<body>
+  <main>
+    <p>Diese Seite ist umgezogen. Du wirst weitergeleitet.</p>
+    <p><a href="/privacy.html#impressum">Weiter zu Impressum</a></p>
+  </main>
+</body>
+</html>
