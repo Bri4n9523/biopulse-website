@@ -24,4 +24,4 @@ Add these A records pointing to GitHub Pages:
 And CNAME: `www` → `[dein-github-username].github.io`
 
 ## Contact
-biopulsehealthappsupport@gmail.com
+support@junevex.app
